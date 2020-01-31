@@ -24,6 +24,11 @@ describe("GET /", function() {
       expect(res.body.you).toBe(undefined);
     });
   });
-
+describe ("POST /api/auth/login", () => {
+  it("should tell me im logged in", async () =>{
+    const res=await request(server).get("/api/auth/login");
+    expect(200)
+  })
+} )
   
 });
