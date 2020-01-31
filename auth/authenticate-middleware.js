@@ -17,6 +17,7 @@ module.exports= (req, res, next) => {
     req.token = verified;
     next();
   } catch (error) {
+    console.log(error)
     res.status(400).json({ error: 'Invalid Token' });
   }
 };
